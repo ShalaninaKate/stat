@@ -1,0 +1,1 @@
+import{r as e,j as o}from"./index-CH1OYfRw.js";function t(){return e.useEffect(()=>{document.title="Home"},[]),o.jsx("div",{className:"home__container",children:"Home"})}const m=t;export{m as component};
