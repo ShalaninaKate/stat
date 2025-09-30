@@ -1,1 +1,0 @@
-import{j as t,L as o,c as e}from"./index-CH1OYfRw.js";function n(){return t.jsxs("div",{children:[t.jsx("h1",{children:"About"}),t.jsx(o,{to:"/team",children:"dfsf"})]})}const r=e("/about")({component:n});export{r as Route};
