@@ -1,0 +1,113 @@
+@use "@shared/styles/index" as m;
+
+.button {
+  padding: m.toRem(7);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: m.toRem(6);
+  border-radius: 6px;
+  color: var(--white);
+  font-weight: 500;
+  background-color: var(--green);
+  font-size: m.toRem(14);
+
+  @media (min-width: m.toEm(641)) {
+    transition: background 0.3s ease;
+  }
+
+  @include m.hover {
+    background-color: var(--green-transition);
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: var(--main-color);
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+
+    @include m.hover {
+      background-color: var(--green-transition);
+      color: var(--white);
+    }
+
+  }
+
+  &--white {
+    background-color: var(--white);
+    color: var(--green);
+    box-shadow: 0 1px 3px 0 rgba(166, 175, 195, 0.4);
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--green-transition);
+        color: var(--white);
+      }
+    }
+  }
+
+  &--wh {
+    background-color: var(--white);
+    color: var(--main-color);
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--green-transition);
+        color: var(--white);
+      }
+    }
+  }
+
+  &--border {
+    background-color: var(--white);
+    color: var(--green);
+    border: 1px solid var(--green);
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--green-transition);
+        color: var(--white);
+      }
+    }
+  }
+  &--red-border {
+    background-color: var(--white);
+    border: 1px solid #e33629;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+    color: #e33629;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #e33629;
+        color: var(--white);
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--green-transition);
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &__icon {
+    width: m.toRem(16);
+    height: m.toRem(16);
+    fill: var(--white);
+  }
+}

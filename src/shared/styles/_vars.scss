@@ -1,0 +1,23 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+  --second-family: 'FONTSPRING DEMO - Gelica SBd', sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --main-color: #111928;
+  --white: #fff;
+  --black: #000;
+  --green: #13c296;
+  --green-transition: #20a785;
+  --text: #637381;
+  --green_05: rgba(19, 194, 150, 0.05);
+
+  --grey-light: #9ca3af;
+  --grey-border: #dfe4ea;
+  --grey-hover: #f3f4f6;
+  --bg-gradient: linear-gradient(190deg, #fafafa 0%, #f6f9ff 100%);
+  --bg-tab: #f3f4f6;
+  --red: #f77;
+}
+
+

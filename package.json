@@ -9,26 +9,33 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "deploy": "npm run build && gh-pages -d build"
+    "deploy": "cross-env VITE_BASE_PATH='/stat/' npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.131.35",
     "@tanstack/react-router-devtools": "^1.131.35",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@feature-sliced/cli": "^1.0.0",
     "@tanstack/router-plugin": "^1.131.35",
+    "@types/node": "^24.3.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
+    "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "plop": "^4.0.2",
+    "sass": "^1.92.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vite-plugin-svg-icons": "^2.0.1"
   }
 }

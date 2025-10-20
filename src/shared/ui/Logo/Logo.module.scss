@@ -1,0 +1,19 @@
+@use "@shared/styles/index" as m;
+
+.logo {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+  width: m.toRem(180);
+  height: m.toRem(42);
+
+  @media (max-width: m.toEm(640)) {
+    width: m.toRem(45);
+    overflow: hidden;
+  }
+
+  &__icon {
+    width: m.toRem(180);
+    height: m.toRem(42);
+  }
+}

@@ -1,0 +1,8 @@
+@use './mixins/font-face' as m;
+
+@include m.font-face("Inter", "/fonts/Inter-Medium", 500, normal);
+@include m.font-face("Inter", "/fonts/Inter-Regular", 400, normal);
+@include m.font-face("Inter", "/fonts/Inter-Bold", 700, normal);
+@include m.font-face("Inter", "/fonts/Inter-SemiBold", 600, normal);
+
+@include m.font-face("Chava", "/fonts/Chava-Regular", 400, normal);

@@ -1,0 +1,232 @@
+@use "@shared/styles/index" as m;
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+      &.error {
+      .input__control {
+        box-shadow: 0 0 0 1px var(--red);
+      }
+
+      .error-text {
+        display: block;
+      }
+    }
+}
+
+.inputWrapperError {
+  .input__control {
+    box-shadow: 0 0 0 1px var(--red);
+  }
+
+  .error-text {
+    display: block;
+  }
+}
+
+
+
+.input {
+  position: relative;
+
+  &__control {
+    padding-left: m.toRem(18);
+    padding-right: m.toRem(40);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: m.toRem(46);
+    border-radius: 6px;
+    font-size: m.toRem(16);
+    background-color: var(--white);
+    box-shadow: 0 0 0 1px var(--grey-border);
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: box-shadow 0.3s ease;
+
+    @media (max-width: m.toEm(992)) {
+      height: m.toRem(40);
+      padding-left: m.toRem(10);
+      padding-right: m.toRem(35);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px var(--green);
+    }
+    &::placeholder {
+      color: var(--grey-light);
+      line-height: 150%;
+    }
+    &--select {
+      height: m.toRem(40);
+      padding-left: m.toRem(18);
+      padding-right: m.toRem(30);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: m.toRem(14);
+    }
+
+    &.dropdown-input {
+      cursor: pointer;
+    }
+
+    &--textarea {
+      padding: m.toRem(12) m.toRem(20);
+      resize: none;
+      height: m.toRem(140);
+      width: 100%;
+      overflow: auto;
+    }
+    &--textarea-short {
+      padding: m.toRem(12) m.toRem(20);
+      resize: none;
+      height: m.toRem(80);
+      width: 100%;
+      overflow: auto;
+    }
+    &--textarea-advert {
+      padding: m.toRem(12) m.toRem(20);
+      resize: none;
+      height: m.toRem(100);
+      width: 100%;
+      overflow: auto;
+    }
+    &--textarea-code {
+      padding: m.toRem(12) m.toRem(35) m.toRem(12) m.toRem(20);
+      align-items: start;
+      resize: none;
+      height: m.toRem(120);
+      width: 100%;
+      overflow: auto;
+      font-size: m.toRem(10);
+      line-height: 120%;
+      color: #9ca3af;
+    }
+    &--advert {
+      padding-left: m.toRem(20);
+      padding-right: m.toRem(20);
+      height: m.toRem(50);
+    }
+
+    &--select-advert {
+      height: m.toRem(50);
+      padding-left: m.toRem(20);
+      padding-right: m.toRem(30);
+      font-size: m.toRem(16);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    right: m.toRem(15);
+    bottom: 0;
+    line-height: 157%;
+    color: var(--text);
+    pointer-events: none;
+  }
+
+  &__btn {
+    position: absolute;
+    right: m.toRem(15);
+    bottom: 50%;
+    transform: translate(0px, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-arrow {
+    transition: transform 0.3s ease 0s;
+    width: m.toRem(10);
+    height: m.toRem(5);
+  }
+  &__btn-arrow-advert {
+    transition: transform 0.3s ease 0s;
+    width: m.toRem(16);
+    height: m.toRem(16);
+  }
+
+  &__btn-calendar {
+    width: m.toRem(24);
+    height: m.toRem(24);
+  }
+  &__btn-search {
+    width: m.toRem(16);
+    height: m.toRem(16);
+    fill: var(--green);
+  }
+
+  &__btn-eye {
+    width: m.toRem(16);
+    height: m.toRem(16);
+    fill: #6b7280;
+
+    .show &.on {
+      display: block;
+    }
+
+    .show &.off {
+      display: none;
+    }
+
+    &.on {
+      display: none;
+    }
+
+    &.off {
+    }
+
+    &.show {
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: m.toRem(20);
+    bottom: 50%;
+    transform: translate(0px, 50%);
+    width: m.toRem(24);
+    height: m.toRem(24);
+  }
+
+  // .input__text
+
+  &__text {
+    position: absolute;
+    right: m.toRem(20);
+    bottom: 50%;
+    transform: translate(0px, 50%);
+    font-size: m.toRem(14);
+  }
+
+  &.show {
+    .input__control {
+      outline: none;
+    }
+
+    .dropdown-select {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, 0);
+    }
+
+    .input__btn-arrow {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.error-text {
+  margin-top: m.toRem(2);
+  display: none;
+  font-size: m.toRem(11);
+  color: red;
+}
