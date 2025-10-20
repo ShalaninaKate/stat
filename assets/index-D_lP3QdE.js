@@ -1,1 +1,0 @@
-import{j as s,L as a,O as r}from"./index-CD4-tpKT.js";const d=()=>s.jsxs("div",{className:"dashboard-layout",children:[s.jsx("aside",{children:s.jsx("ul",{children:s.jsx("li",{children:s.jsx(a,{to:"/dashboard",children:"Dashboard Home"})})})}),s.jsx("main",{children:s.jsx(r,{})})]});export{d as component};
