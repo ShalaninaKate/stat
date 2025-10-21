@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import path from 'node:path'
-const basePath = process.env.VITE_BASE_PATH || '/';
+// const basePath = process.env.VITE_BASE_PATH || '/';
 
 
 
@@ -35,7 +35,7 @@ export default defineConfig({
   
   ],
     
-    base: basePath,
+    base: '/stat/',
     resolve: {
     alias: {
       '@shared': path.resolve(__dirname, 'src/shared'),
